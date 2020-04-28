@@ -27,7 +27,7 @@ def subdomainVisits(cpdomains):
             domain = domain[indexOfDot+1:]
             indexOfDot = domain.find('.')
 
-        # Edge case that is no preceeding '.' like com, org
+        # Edge  case that is no preceeding '.' like com, org
         if not domain in wordDict:
             wordDict[domain] = int(uniqueValue[0])
         else:
