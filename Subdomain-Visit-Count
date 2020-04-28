@@ -1,9 +1,7 @@
 
-
-class Solution:
-    def subdomainVisits(self, cpdomains: List[str]) -> List[str]:
+def subdomainVisits(cpdomains):
     """
-     Greedy approach to find the total count
+    Greedy approach to find the total coun
     :param cpdomains: The list of the codomain with the number of the requests
     :return: The return value should be the counted value and unique domain list
     """
@@ -29,7 +27,7 @@ class Solution:
             domain = domain[indexOfDot+1:]
             indexOfDot = domain.find('.')
 
-        # Edge case that is no preceeding '.' like com, org etc
+        # Edge case that is no preceeding '.' like com, org
         if not domain in wordDict:
             wordDict[domain] = int(uniqueValue[0])
         else:
@@ -45,5 +43,5 @@ class Solution:
     return uniqueValueOfDomain
 
 
-# Test Case provided by the LeetCode
-#print(subdomainVisits(["900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"]))
+# Test Case Provided by the LeetCode
+# print(subdomainVisits(["900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"]))
