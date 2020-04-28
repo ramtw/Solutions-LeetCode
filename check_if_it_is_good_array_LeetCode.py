@@ -1,3 +1,5 @@
+# ALL Test passed, and plus points are easy and commented solution
+
 class Solution:
     def isGoodArray(self, nums):
         """
